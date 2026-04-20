@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Көлеңке Әлемі 🌑</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════ -->
+<header>
+  <div class="logo">🌑 Көлеңке Әлемі</div>
+
+  <nav>
+    <button data-page="home"      class="active">🏠 Басты</button>
+    <button data-page="simulator">☀️ Симулятор</button>
+    <button data-page="theater">  🎭 Театр</button>
+    <button data-page="quiz">     🎮 Ойын</button>
+  </nav>
+
+  <!-- JSON upload (hidden input + visible button) -->
+  <input type="file" id="json-file-input" accept=".json" style="display:none">
+  <button class="json-btn" onclick="app.openJsonPicker()">
+    📂 JSON жүктеу
+  </button>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════════════════════════ -->
+<section id="page-home" class="page active">
+
+  <div class="hero">
+    <h1>Көлеңке Әлемін Зерттейміз!</h1>
+    <p>
+      Жарық пен тень туралы ғылымды интерактивті симулятор,
+      театр және тапсырма арқылы үйрен.
+    </p>
+  </div>
+
+  <h2 class="section-title">📚 Не үйренесің?</h2>
+
+  <div class="cards-grid">
+    <div class="info-card c1" data-nav="simulator">
+      <div class="icon">☀️</div>
+      <h3>Жарық симуляторы</h3>
+      <p>
+        Жарық көзін жылжытып, тень қалай өзгеретінін нақты уақытта бақыла.
+        Физика формулалары экранда!
+      </p>
+    </div>
+
+    <div class="info-card c2" data-nav="theater">
+      <div class="icon">🎭</div>
+      <h3>Тень театры</h3>
+      <p>
+        Қолыңды жылжытып, экранда тень жасайсың. Әртүрлі фигуралар мен
+        қуыршақтарды сынап көр!
+      </p>
+    </div>
+
+    <div class="info-card c3" data-nav="quiz">
+      <div class="icon">🔍</div>
+      <h3>Көлеңкені тап!</h3>
+      <p>
+        Тень бейнесін көріп, объектіні дұрыс тап. 8 сұрақ, 3 жұлдыз
+        жинауға тырыс!
+      </p>
+    </div>
+
+    <div class="info-card c4">
+      <div class="icon">📂</div>
+      <h3>JSON-мен теңшеу</h3>
+      <p>
+        Өзіңнің PNG суреттерің мен content.json файлыңды жүктеп,
+        жаңа объектілер қос!
+      </p>
+    </div>
+  </div>
+
+  <h2 class="section-title">🔬 Ғылыми фактілер</h2>
+  <div class="fact-box">
+    <h3>Тень қалай пайда болады?</h3>
+    <p>
+      Жарық сәулесі тікелей таралады. Жарық жолында кедергі болса —
+      кедергінің артында жарықсыз аймақ (тень) пайда болады.
+    </p>
+    <br>
+    <strong style="color:var(--gold)">📐 Тень формулалары:</strong>
+    <br><br>
+    🔸 <strong>Масштаб:</strong> shadowScale = 1 + (қашықтық / 300)
+    <br>
+    🔸 <strong>Позиция:</strong> shadowX = objectX + (objectX − lightX) × 0.5
+    <br>
+    🔸 <strong>Бұрыш:</strong> rotation = atan2(objectY − lightY, objectX − lightX)
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: SIMULATOR
+══════════════════════════════════════════════════════ -->
+<section id="page-simulator" class="page">
+
+  <h2 class="section-title">☀️ Тень Симуляторы</h2>
+
+  <div class="sim-wrap">
+
+    <!-- Main canvas — user moves cursor/finger to position light -->
+    <canvas id="sim-canvas"></canvas>
+
+    <!-- Controls row 1: object selection -->
+    <div class="sim-controls">
+      <div class="ctrl-panel">
+        <label>🎯 Объект:</label>
+        <div id="obj-buttons" style="display:flex;gap:6px;flex-wrap:wrap;">
+          <!-- Populated by app.js → _buildObjectBtns() -->
+        </div>
+      </div>
+
+      <div class="ctrl-panel">
+        <label>💡 Жарық:</label>
+        <button class="toggle-btn" id="light-toggle"
+                onclick="this.classList.toggle('off'); app.simulator?.toggleLight()">
+          Көрсету
+        </button>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="tip-box">
+      💡 Тышқанды немесе саусағыңды канвас бойынша жылжытып,
+         жарық көзін орнын ауыстырыңыз. Тень автоматты өзгереді!
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: THEATER
+══════════════════════════════════════════════════════ -->
+<section id="page-theater" class="page">
+
+  <h2 class="section-title">🎭 Тень Театры</h2>
+
+  <div class="theater-wrap">
+
+    <!-- Theater canvas — user drags hand silhouette -->
+    <canvas id="theater-canvas"></canvas>
+
+    <!-- Figure selection -->
+    <div class="theater-controls">
+      <div class="ctrl-panel">
+        <label>🖐 Фигура:</label>
+        <div id="hand-buttons" style="display:flex;gap:6px;flex-wrap:wrap;">
+          <!-- Populated by app.js → _buildHandBtns() -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Info panel -->
+    <div class="theater-info">
+      <strong>🎬 Қалай жұмыс істейді?</strong><br>
+      Экранда <strong>тышқанды басып жылжытыңыз</strong> (немесе саусағыңызбен сүйреңіз) —
+      фигура сіздің қолыңыздай қозғалады, ал жарық шамы оның тенін
+      қабырғаға шашырата бейнелейді.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: QUIZ
+══════════════════════════════════════════════════════ -->
+<section id="page-quiz" class="page">
+
+  <h2 class="section-title">🎮 Көлеңкені Тап!</h2>
+
+  <!-- Quiz is rendered here entirely by quiz.js -->
+  <div id="quiz-container">
+    <p style="text-align:center;color:var(--text-dim);padding:40px">
+      Жүктелуде…
+    </p>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPTS  (order matters: shapes first, then modules, then app)
+══════════════════════════════════════════════════════ -->
+<script src="js/shapes.js"></script>
+<script src="js/simulator.js"></script>
+<script src="js/theater.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+{
+  "_comment": "Көлеңке Әлемі — контент конфигурациясы. Жаңа объект = PNG файл + JSON жазба.",
+
+  "objects": [
+    {
+      "name":   "ball",
+      "label":  "Доп",
+      "emoji":  "⚽",
+      "image":  "assets/ball.png",
+      "shadow": "assets/shadow_ball.png",
+      "shape":  "ball"
+    },
+    {
+      "name":   "car",
+      "label":  "Машина",
+      "emoji":  "🚗",
+      "image":  "assets/car.png",
+      "shadow": "assets/shadow_car.png",
+      "shape":  "car"
+    },
+    {
+      "name":   "tree",
+      "label":  "Ағаш",
+      "emoji":  "🌳",
+      "image":  "assets/tree.png",
+      "shadow": "assets/shadow_tree.png",
+      "shape":  "tree"
+    },
+    {
+      "name":   "house",
+      "label":  "Үй",
+      "emoji":  "🏠",
+      "image":  "assets/house.png",
+      "shadow": "assets/shadow_house.png",
+      "shape":  "house"
+    },
+    {
+      "name":   "star",
+      "label":  "Жұлдыз",
+      "emoji":  "⭐",
+      "image":  "assets/star.png",
+      "shadow": "assets/shadow_star.png",
+      "shape":  "star"
+    }
+  ],
+
+  "theater": [
+    {
+      "name":   "rabbit",
+      "label":  "Қоян",
+      "emoji":  "🐰",
+      "hand":   "assets/hand_rabbit.png",
+      "shadow": "assets/shadow_rabbit.png",
+      "shape":  "rabbit"
+    },
+    {
+      "name":   "bird",
+      "label":  "Құс",
+      "emoji":  "🐦",
+      "hand":   "assets/hand_bird.png",
+      "shadow": "assets/shadow_bird.png",
+      "shape":  "bird"
+    },
+    {
+      "name":   "dog",
+      "label":  "Ит",
+      "emoji":  "🐕",
+      "hand":   "assets/hand_dog.png",
+      "shadow": "assets/shadow_dog.png",
+      "shape":  "dog"
+    },
+    {
+      "name":   "fox",
+      "label":  "Түлкі",
+      "emoji":  "🦊",
+      "hand":   "assets/hand_fox.png",
+      "shadow": "assets/shadow_fox.png",
+      "shape":  "fox"
+    }
+  ],
+
+  "quiz": [
+    {
+      "shadow":  "assets/shadow_ball.png",
+      "shape":   "ball",
+      "options": ["ball", "star", "car"],
+      "correct": "ball"
+    },
+    {
+      "shadow":  "assets/shadow_car.png",
+      "shape":   "car",
+      "options": ["tree", "car", "house"],
+      "correct": "car"
+    },
+    {
+      "shadow":  "assets/shadow_tree.png",
+      "shape":   "tree",
+      "options": ["star", "ball", "tree"],
+      "correct": "tree"
+    },
+    {
+      "shadow":  "assets/shadow_house.png",
+      "shape":   "house",
+      "options": ["house", "car", "ball"],
+      "correct": "house"
+    },
+    {
+      "shadow":  "assets/shadow_star.png",
+      "shape":   "star",
+      "options": ["star", "tree", "rabbit"],
+      "correct": "star"
+    },
+    {
+      "shadow":  "assets/shadow_rabbit.png",
+      "shape":   "rabbit",
+      "options": ["rabbit", "dog", "fox"],
+      "correct": "rabbit"
+    },
+    {
+      "shadow":  "assets/shadow_bird.png",
+      "shape":   "bird",
+      "options": ["fox", "bird", "car"],
+      "correct": "bird"
+    },
+    {
+      "shadow":  "assets/shadow_dog.png",
+      "shape":   "dog",
+      "options": ["dog", "tree", "star"],
+      "correct": "dog"
+    }
+  ]
+}
