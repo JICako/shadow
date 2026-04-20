@@ -48,34 +48,34 @@
     {
       "name":   "rabbit",
       "label":  "Қоян",
-      "emoji":  "🐰",
-      "hand":   "assets/hand_rabbit.png",
-      "shadow": "assets/shadow_rabbit.png",
+      "emoji":  "",
+      "hand":   "assets/bunny.png",
+      "shadow": "assets/shadow_bunny.png",
       "shape":  "rabbit"
     },
     {
       "name":   "bird",
       "label":  "Құс",
-      "emoji":  "🐦",
-      "hand":   "assets/hand_bird.png",
+      "emoji":  "",
+      "hand":   "assets/bird.png",
       "shadow": "assets/shadow_bird.png",
       "shape":  "bird"
     },
     {
-      "name":   "dog",
-      "label":  "Ит",
-      "emoji":  "🐕",
-      "hand":   "assets/hand_dog.png",
-      "shadow": "assets/shadow_dog.png",
-      "shape":  "dog"
+      "name":   "wolf",
+      "label":  "Қасқыр",
+      "emoji":  "",
+      "hand":   "assets/wolf.png",
+      "shadow": "assets/shadow_wolf.png",
+      "shape":  "wolf"
     },
     {
-      "name":   "fox",
-      "label":  "Түлкі",
-      "emoji":  "🦊",
-      "hand":   "assets/hand_fox.png",
-      "shadow": "assets/shadow_fox.png",
-      "shape":  "fox"
+      "name":   "deff",
+      "label":  "Бұғы",
+      "emoji":  "",
+      "hand":   "assets/deef",
+      "shadow": "assets/shadow_deef.png",
+      "shape":  "deef"
     }
   ],
 
@@ -111,7 +111,7 @@
       "correct": "star"
     },
     {
-      "shadow":  "assets/shadow_rabbit.png",
+      "shadow":  "assets/shadow_bunny.png",
       "shape":   "rabbit",
       "options": ["rabbit", "dog", "fox"],
       "correct": "rabbit"
@@ -123,7 +123,7 @@
       "correct": "bird"
     },
     {
-      "shadow":  "assets/shadow_dog.png",
+      "shadow":  "assets/shadow_wolf.png",
       "shape":   "dog",
       "options": ["dog", "tree", "star"],
       "correct": "dog"
