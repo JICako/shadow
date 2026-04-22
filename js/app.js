@@ -314,7 +314,7 @@ class App {
         },
         {
           "name":   "glass",
-          "label":  "Стақан",
+          "label":  "Стакан",
           "emoji":  "",
           "image":  "assets/glass.png",
           "shadow": "assets/shadow_glass.png",
