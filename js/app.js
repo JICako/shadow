@@ -118,6 +118,31 @@ class App {
         this.quiz.load(this.data.quiz, this.data.objects);
         break;
       }
+
+      case 'organize': {
+        initOrganize();
+        break;
+      }
+
+      case 'bekitu': {
+        initBekitu();
+        break;
+      }
+
+      case 'tolkyn': {
+        initTolkyn();
+        break;
+      }
+
+      case 'sen': {
+        initSen();
+        break;
+      }
+
+      case 'sergiту': {
+        initSergiту();
+        break;
+      }
     }
   }
 
@@ -249,8 +274,8 @@ class App {
       objects: [
         {
           name:   'ball',
-          label:  'Шар',
-          emoji:  '⚽',
+          label:  'Доп',
+          emoji:  '',
           image:  'assets/ball.png',
           shadow: 'assets/shadow_ball.png',
           shape:  'ball',
@@ -258,7 +283,7 @@ class App {
         {
           name:   'car',
           label:  'Машина',
-          emoji:  '🚗',
+          emoji:  '',
           image:  'assets/car.png',
           shadow: 'assets/shadow_car.png',
           shape:  'car',
@@ -266,7 +291,7 @@ class App {
         {
           name:   'tree',
           label:  'Ағаш',
-          emoji:  '🌳',
+          emoji:  '',
           image:  'assets/tree.png',
           shadow: 'assets/shadow_tree.png',
           shape:  'tree',
@@ -274,7 +299,7 @@ class App {
         {
           name:   'house',
           label:  'Үй',
-          emoji:  '🏠',
+          emoji:  '',
           image:  'assets/house.png',
           shadow: 'assets/shadow_house.png',
           shape:  'house',
@@ -282,11 +307,19 @@ class App {
         {
           name:   'star',
           label:  'Жұлдыз',
-          emoji:  '⭐',
+          emoji:  '',
           image:  'assets/star.png',
           shadow: 'assets/shadow_star.png',
           shape:  'star',
         },
+        {
+          "name":   "glass",
+          "label":  "Стақан",
+          "emoji":  "",
+          "image":  "assets/glass.png",
+          "shadow": "assets/shadow_glass.png",
+          "shape":  "glass"
+        }
       ],
 
       theater: [
@@ -352,14 +385,14 @@ class App {
         {
           shadow:  'assets/shadow_star.png',
           shape:   'star',
-          options: ['star', 'tree', 'rabbit'],
+          options: ['star', 'tree', 'bunny'],
           correct: 'star',
         },
         {
-          shadow:  'assets/shadow_rabbit.png',
-          shape:   'rabbit',
-          options: ['rabbit', 'dog', 'fox'],
-          correct: 'rabbit',
+          shadow:  'assets/shadow_bunny.png',
+          shape:   'bunny',
+          options: ['bunny', 'wolf', 'fox'],
+          correct: 'bunny',
         },
         {
           shadow:  'assets/shadow_bird.png',
@@ -368,10 +401,10 @@ class App {
           correct: 'bird',
         },
         {
-          shadow:  'assets/shadow_dog.png',
-          shape:   'dog',
-          options: ['dog', 'tree', 'star'],
-          correct: 'dog',
+          shadow:  'assets/shadow_wolf.png',
+          shape:   'wolf',
+          options: ['wolf', 'tree', 'star'],
+          correct: 'wolf',
         },
       ],
     };

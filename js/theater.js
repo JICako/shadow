@@ -210,7 +210,7 @@ class ShadowTheater {
     } else {
       // Fallback shape
       ctx.save();
-      Shapes.draw(ctx, this.selected?.shape || 'rabbit',
+      Shapes.draw(ctx, this.selected?.shape || 'bunny',
                   x, y, size / 2, Shapes.objectColor(this.selected?.shape));
       ctx.restore();
     }

@@ -19,13 +19,14 @@
     <button data-page="simulator">☀️ Симулятор</button>
     <button data-page="theater">  🎭 Театр</button>
     <button data-page="quiz">     🎮 Ойын</button>
+    <button data-page="organize"> 📋 Ұйымдастыру</button>
+    <button data-page="bekitu">   ✅ Бекіту</button>
+    <button data-page="tolkyn">   🌊 Толқын</button>
+    <button data-page="sen">      🎬 Сен білесіңбе?</button>
+    <button data-page="sergiту"> 💃 Сергіту</button>
   </nav>
 
-  <!-- JSON upload (hidden input + visible button) -->
-  <input type="file" id="json-file-input" accept=".json" style="display:none">
-  <button class="json-btn" onclick="app.openJsonPicker()">
-    📂 JSON жүктеу
-  </button>
+
 </header>
 
 
@@ -37,7 +38,7 @@
   <div class="hero">
     <h1>Көлеңке Әлемін Зерттейміз!</h1>
     <p>
-      Жарық пен тень туралы ғылымды интерактивті симулятор,
+      Жарық пен көлеңке туралы ғылымды интерактивті симулятор,
       театр және тапсырма арқылы үйрен.
     </p>
   </div>
@@ -49,17 +50,16 @@
       <div class="icon">☀️</div>
       <h3>Жарық симуляторы</h3>
       <p>
-        Жарық көзін жылжытып, тень қалай өзгеретінін нақты уақытта бақыла.
+        Жарық көзін жылжытып, көлеңке қалай өзгеретінін нақты уақытта бақыла.
         Физика формулалары экранда!
       </p>
     </div>
 
     <div class="info-card c2" data-nav="theater">
       <div class="icon">🎭</div>
-      <h3>Тень театры</h3>
+      <h3>Көлеңке театры</h3>
       <p>
-        Қолыңды жылжытып, экранда тень жасайсың. Әртүрлі фигуралар мен
-        қуыршақтарды сынап көр!
+        Қолыңды жылжытып, экранда көлеңке жасайсың. Әртүрлі фигураларды сынап көр!
       </p>
     </div>
 
@@ -67,30 +67,21 @@
       <div class="icon">🔍</div>
       <h3>Көлеңкені тап!</h3>
       <p>
-        Тень бейнесін көріп, объектіні дұрыс тап. 8 сұрақ, 3 жұлдыз
+        Көлеңке бейнесін көріп, объектіні дұрыс тап. 8 сұрақ, 3 жұлдыз
         жинауға тырыс!
-      </p>
-    </div>
-
-    <div class="info-card c4">
-      <div class="icon">📂</div>
-      <h3>JSON-мен теңшеу</h3>
-      <p>
-        Өзіңнің PNG суреттерің мен content.json файлыңды жүктеп,
-        жаңа объектілер қос!
       </p>
     </div>
   </div>
 
   <h2 class="section-title">🔬 Ғылыми фактілер</h2>
   <div class="fact-box">
-    <h3>Тень қалай пайда болады?</h3>
+    <h3>Көлеңке қалай пайда болады?</h3>
     <p>
       Жарық сәулесі тікелей таралады. Жарық жолында кедергі болса —
-      кедергінің артында жарықсыз аймақ (тень) пайда болады.
+      кедергінің артында жарықсыз аймақ (көлеңке) пайда болады.
     </p>
     <br>
-    <strong style="color:var(--gold)">📐 Тень формулалары:</strong>
+    <strong style="color:var(--gold)">📐 Көлеңке формулалары:</strong>
     <br><br>
     🔸 <strong>Масштаб:</strong> shadowScale = 1 + (қашықтық / 300)
     <br>
@@ -107,7 +98,7 @@
 ══════════════════════════════════════════════════════ -->
 <section id="page-simulator" class="page">
 
-  <h2 class="section-title">☀️ Тень Симуляторы</h2>
+  <h2 class="section-title">☀️ Көлеңке Симуляторы</h2>
 
   <div class="sim-wrap">
 
@@ -135,7 +126,7 @@
     <!-- Tip -->
     <div class="tip-box">
       💡 Тышқанды немесе саусағыңды канвас бойынша жылжытып,
-         жарық көзін орнын ауыстырыңыз. Тень автоматты өзгереді!
+         жарық көзін орнын ауыстырыңыз. Көлеңке автоматты өзгереді!
     </div>
 
   </div>
@@ -147,7 +138,7 @@
 ══════════════════════════════════════════════════════ -->
 <section id="page-theater" class="page">
 
-  <h2 class="section-title">🎭 Тень Театры</h2>
+  <h2 class="section-title">🎭 Көлеңке Театры</h2>
 
   <div class="theater-wrap">
 
@@ -194,12 +185,227 @@
 
 
 <!-- ══════════════════════════════════════════════════════
+     PAGE: ORGANIZE — Ұйымдастыру кезең
+══════════════════════════════════════════════════════ -->
+<section id="page-organize" class="page">
+
+  <h2 class="section-title">📋 Ұйымдастыру кезең</h2>
+
+  <div class="org-wrapper">
+    <!-- Central card -->
+    <div class="org-card">
+      <h3 class="org-title" id="org-text">Жүктелуде…</h3>
+      <div class="org-img-wrap">
+        <!-- Slide image — uses array of images defined in pages.js -->
+        <img id="org-img" src="" alt="" class="org-img" />
+        <div class="org-img-placeholder" id="org-placeholder"></div>
+      </div>
+      <!-- Step dots -->
+      <div class="org-dots" id="org-dots"></div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="org-nav">
+      <button class="org-btn org-btn-back"  id="org-prev" onclick="organizePrev()">← Артқа</button>
+      <button class="org-btn org-btn-next"  id="org-next" onclick="organizeNext()">Әрі қарай →</button>
+    </div>
+
+    <!-- Feedback link -->
+    <div class="org-feedback-row">
+      <a class="org-feedback-link"
+         href="#"
+         target="_blank"
+         rel="noopener noreferrer">
+        💬 Кері байланыс
+      </a>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: BEKITU — Бекіту тапсырмалары
+══════════════════════════════════════════════════════ -->
+<section id="page-bekitu" class="page">
+
+  <h2 class="section-title">✅ Бекіту тапсырмалары</h2>
+
+  <!-- Flashcard content is rendered entirely by pages.js → bekituRender() -->
+  <div id="bekitu-container">
+    <p style="text-align:center;color:var(--text-dim);padding:40px">Жүктелуде…</p>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: TOLKYN — Толқын мен сәуле
+══════════════════════════════════════════════════════ -->
+<section id="page-tolkyn" class="page">
+
+  <h2 class="section-title">🌊 Толқын мен сәуле</h2>
+
+  <!-- Large landscape image at the top -->
+  <div class="tolkyn-banner">
+    <!-- Insert your landscape image here -->
+    <div class="tolkyn-banner-placeholder"><img src="assets/pic.png" alt=""></div>
+  </div>
+
+  <div class="tolkyn-selects">
+
+    <!-- Info accordion 1: Айырмашылығы -->
+    <div class="tolkyn-accordion" id="accord-diff">
+      <button class="tolkyn-accord-header" onclick="tolkynToggle('accord-diff')" aria-expanded="false">
+        <span class="tolkyn-accord-title">Айырмашылығы</span>
+        <span class="tolkyn-accord-arrow">▾</span>
+      </button>
+      <div class="tolkyn-accord-body" role="list">
+        <!-- сюда вставить список айырмашылығы -->
+        <p class="tolkyn-accord-empty">Толқын – энергияның кеңістікте тербеліс арқылы таралуы (мысалы, су толқыны, дыбыс толқыны).</p>
+        <p class="tolkyn-accord-empty">Толқын – кедергілерді айналып өте алады, бөгеттің артында да тарала береді (дифракция құбылысы).</p>
+        <p class="tolkyn-accord-empty">Сәуле – жарықтың немесе энергияның бір бағытта түзу сызық бойымен таралуын көрсететін ұғым.</p>
+        <p class="tolkyn-accord-empty">Сәуле (жарық сәулесі) – әдетте түзу сызық бойымен жүреді, сондықтан кедергіні айналып өте алмайды, көлеңке пайда болады.</p>
+      </div>
+    </div>
+
+    <!-- Info accordion 2: Ұқсастығы -->
+    <div class="tolkyn-accordion" id="accord-sim">
+      <button class="tolkyn-accord-header" onclick="tolkynToggle('accord-sim')" aria-expanded="false">
+        <span class="tolkyn-accord-title">Ұқсастығы</span>
+        <span class="tolkyn-accord-arrow">▾</span>
+      </button>
+      <div class="tolkyn-accord-body" role="list">
+        <!-- сюда вставить список ұқсастығы -->
+        <p class="tolkyn-accord-empty">Екеуі де энергияны тасымалдайды.</p>
+        <p class="tolkyn-accord-empty">Екеуі де кеңістікте таралады.</p>
+        <p class="tolkyn-accord-empty">Екеуі де жарық құбылыстарын түсіндіруде қолданылады (жарық – толқын да, сәуле түрінде де қарастырылады).</p>
+        <p class="tolkyn-accord-empty">Екеуінің де таралу бағыты болады.
+
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: SEN — Сен білесіңбе?
+══════════════════════════════════════════════════════ -->
+<section id="page-sen" class="page">
+
+  <h2 class="section-title">🎬 Сен білесіңбе?</h2>
+
+  <div class="sen-wrapper">
+
+    <!-- Video block -->
+    <div class="sen-video-wrap">
+      <!-- сюда вставить видео ссылку -->
+      <iframe
+        class="sen-iframe"
+        src="assets/tutulu.mp4"
+        title="Сен білесіңбе? видео"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Text block -->
+    <div class="sen-text-block">
+      <h1>☀️ Күн тұтылуы деген не?</h1>
+      <p>
+        Күн тұтылуы — бұл <b>Ай Жер мен Күннің арасына келген кезде</b> болатын табиғи құбылыс.
+        Сол кезде Ай Күннің жарығын жауып, бізге Күн көрінбей қалады.
+      </p>
+
+      <h2>🌍 Қалай болады?</h2>
+      <div class="box">
+        Күн — Ай — Жер бір сызықта орналасады
+      </div>
+      <ul>
+        <li>☀️ Күн — жарық береді</li>
+        <li>🌙 Ай — Күннің алдынан өтеді</li>
+        <li>🌍 Жер — біз тұратын планета</li>
+      </ul>
+      <p>Ай Күннің алдына келгенде, Күн толық немесе жартылай көрінбей қалады.</p>
+
+      <h2>🌑 Күн тұтылуының түрлері</h2>
+      <ul>
+        <li><b>Толық күн тұтылуы</b> – Күн толық жабылады, аспан қараңғыланады</li>
+        <li><b>Жартылай күн тұтылуы</b> – Күннің бір бөлігі ғана жабылады</li>
+      </ul>
+
+      <h2>⏰ Қашан болады?</h2>
+      <p>Күн тұтылуы жиі болмайды. Ол жылына бірнеше рет қана болуы мүмкін.</p>
+
+      <h2>⚠️ Қауіпсіздік ережесі</h2>
+      <div class="box warning">
+        <ul>
+          <li>❌ Күнге тікелей қарауға болмайды</li>
+          <li>🕶️ Арнайы көзілдірік қолдану керек</li>
+        </ul>
+      </div>
+
+    <h2>🧠 Қызықты факт</h2>
+    <p>
+        Күн тұтылған кезде кейде күндіз болса да, аспан қараңғы болып,
+        жұлдыздар көрінуі мүмкін!
+    </p>
+      <p class="sen-text-placeholder">Мәтін осында болады…</p>
+    </div>
+
+    <!-- Test placeholder -->
+    <div class="sen-test-block">
+      <h3 class="sen-test-title">📝 Тест</h3>
+      <!-- сюда вставить тест -->
+      <p class="sen-text-placeholder">Тест осында болады…</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: SERGIТУ — Сергіту сәті
+══════════════════════════════════════════════════════ -->
+<section id="page-sergiту" class="page">
+
+  <h2 class="section-title" style="justify-content:center;">💃 Сергіту сәті</h2>
+
+  <div class="sergitu-wrapper">
+
+    <p class="sergitu-heading">Роботпен бірге биле!</p>
+
+    <!-- Centered video -->
+    <div class="sergitu-video-wrap">
+      <!-- сюда вставить видео -->
+      <iframe
+        class="sergitu-iframe"
+        src="assets/robot.mp4"
+        title="Сергіту сәті — Роботпен бірге биле"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
      SCRIPTS  (order matters: shapes first, then modules, then app)
 ══════════════════════════════════════════════════════ -->
 <script src="js/shapes.js"></script>
 <script src="js/simulator.js"></script>
 <script src="js/theater.js"></script>
 <script src="js/quiz.js"></script>
+<script src="js/pages.js"></script>
 <script src="js/app.js"></script>
 
 </body>

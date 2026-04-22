@@ -5,7 +5,7 @@
     {
       "name":   "ball",
       "label":  "Доп",
-      "emoji":  "⚽",
+      "emoji":  "",
       "image":  "assets/ball.png",
       "shadow": "assets/shadow_ball.png",
       "shape":  "ball"
@@ -13,7 +13,7 @@
     {
       "name":   "car",
       "label":  "Машина",
-      "emoji":  "🚗",
+      "emoji":  "",
       "image":  "assets/car.png",
       "shadow": "assets/shadow_car.png",
       "shape":  "car"
@@ -21,7 +21,7 @@
     {
       "name":   "tree",
       "label":  "Ағаш",
-      "emoji":  "🌳",
+      "emoji":  "",
       "image":  "assets/tree.png",
       "shadow": "assets/shadow_tree.png",
       "shape":  "tree"
@@ -29,7 +29,7 @@
     {
       "name":   "house",
       "label":  "Үй",
-      "emoji":  "🏠",
+      "emoji":  "",
       "image":  "assets/house.png",
       "shadow": "assets/shadow_house.png",
       "shape":  "house"
@@ -37,21 +37,29 @@
     {
       "name":   "star",
       "label":  "Жұлдыз",
-      "emoji":  "⭐",
+      "emoji":  "",
       "image":  "assets/star.png",
       "shadow": "assets/shadow_star.png",
       "shape":  "star"
+    },
+    {
+      "name":   "glass",
+      "label":  "Стақан",
+      "emoji":  "",
+      "image":  "assets/glass.png",
+      "shadow": "assets/shadow_glass.png",
+      "shape":  "glass"
     }
   ],
 
   "theater": [
     {
-      "name":   "rabbit",
+      "name":   "bunny",
       "label":  "Қоян",
       "emoji":  "",
       "hand":   "assets/bunny.png",
       "shadow": "assets/shadow_bunny.png",
-      "shape":  "rabbit"
+      "shape":  "bunny"
     },
     {
       "name":   "bird",
@@ -107,14 +115,14 @@
     {
       "shadow":  "assets/shadow_star.png",
       "shape":   "star",
-      "options": ["star", "tree", "rabbit"],
+      "options": ["star", "tree", "bunny"],
       "correct": "star"
     },
     {
       "shadow":  "assets/shadow_bunny.png",
-      "shape":   "rabbit",
-      "options": ["rabbit", "dog", "fox"],
-      "correct": "rabbit"
+      "shape":   "bunny",
+      "options": ["bunny", "dog", "fox"],
+      "correct": "bunny"
     },
     {
       "shadow":  "assets/shadow_bird.png",
@@ -124,9 +132,9 @@
     },
     {
       "shadow":  "assets/shadow_wolf.png",
-      "shape":   "dog",
-      "options": ["dog", "tree", "star"],
-      "correct": "dog"
+      "shape":   "wolf",
+      "options": ["wolf", "tree", "star"],
+      "correct": "wolf"
     }
   ]
 }
