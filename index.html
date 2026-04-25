@@ -13,20 +13,6 @@
 ═══════════════════════════════════════════════════════ -->
 <header>
   <div class="logo">🌑 Көлеңке Әлемі</div>
-
-  <nav>
-    <button data-page="home" class="active">🏠 Басты</button>
-    <button data-page="organize"> 📋 Ұйымдастыру</button>
-    <button data-page="simulator">☀️ Симулятор</button>
-    <button data-page="tolkyn">   🌊 Толқын</button>
-    <button data-page="sergiту">  💃 Сергіту</button>
-    <button data-page="sen">      🎬 Сен білесіңбе?</button>
-    <button data-page="quiz">     🎮 Ойын</button>
-    <button data-page="bekitu">   ✅ Бекіту</button>
-    <button data-page="theater">  🎭 Театр</button>  
-    <button data-page="feedback"> 💬 Кері байланыс</button>
-  </nav>
-
 </header>
 
 <!-- ══════════════════════════════════════════════════════
@@ -35,7 +21,7 @@
 <section id="page-home" class="page active">
 
   <div class="hero">
-    <h1>Көлеңке Әлемін Зерттейміз!</h1>
+    <h1>Көлеңке қалай пайда болады?</h1>
     <p>
       Жарық пен көлеңке туралы ғылымды интерактивті симулятор,
       театр және тапсырма арқылы үйрен.
@@ -435,6 +421,55 @@
   </div>
 
 </section>
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPTS  (order matters: shapes first, then modules, then app)
+══════════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════
+     BOTTOM NAV
+══════════════════════════════════════════════════════ -->
+<nav class="bottom-nav">
+  <button data-page="home" class="active">
+    <span class="bnav-icon">🏠</span>
+    <span class="bnav-label">Басты</span>
+  </button>
+  <button data-page="organize">
+    <span class="bnav-icon">📋</span>
+    <span class="bnav-label">Ұйымдастыру</span>
+  </button>
+  <button data-page="simulator">
+    <span class="bnav-icon">☀️</span>
+    <span class="bnav-label">Симулятор</span>
+  </button>
+  <button data-page="tolkyn">
+    <span class="bnav-icon">🌊</span>
+    <span class="bnav-label">Толқын</span>
+  </button>
+  <button data-page="sergiту">
+    <span class="bnav-icon">💃</span>
+    <span class="bnav-label">Сергіту</span>
+  </button>
+  <button data-page="sen">
+    <span class="bnav-icon">🎬</span>
+    <span class="bnav-label">Сен білесіңбе?</span>
+  </button>
+  <button data-page="quiz">
+    <span class="bnav-icon">🎮</span>
+    <span class="bnav-label">Ойын</span>
+  </button>
+  <button data-page="bekitu">
+    <span class="bnav-icon">✅</span>
+    <span class="bnav-label">Бекіту</span>
+  </button>
+  <button data-page="theater">
+    <span class="bnav-icon">🎭</span>
+    <span class="bnav-label">Театр</span>
+  </button>
+  <button data-page="feedback">
+    <span class="bnav-icon">💬</span>
+    <span class="bnav-label">Кері байланыс</span>
+  </button>
+</nav>
 
 <!-- ══════════════════════════════════════════════════════
      SCRIPTS  (order matters: shapes first, then modules, then app)

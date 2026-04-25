@@ -140,7 +140,7 @@ class ShadowQuiz {
 
         <!-- Shadow display -->
         <div class="quiz-shadow-wrap">
-          <p class="quiz-prompt">Бұл не? Тұяқ бойынша тап! 🔍</p>
+          <p class="quiz-prompt">Бұл не? Көлеңке бойынша тап! 🔍</p>
           <canvas id="quiz-canvas" class="quiz-canvas" width="280" height="280"></canvas>
         </div>
 

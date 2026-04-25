@@ -4,7 +4,7 @@
    Fonts: Baloo 2 (headings) + Nunito (body)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500;600;700;800&display=swap');
 
 /* ── Variables ─────────────────────────────────────────── */
 :root {
@@ -35,7 +35,7 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Jost', system-ui, sans-serif;
   background:  var(--bg);
   color:        var(--text);
   overflow-x:   hidden;
@@ -47,7 +47,7 @@ header {
   display:       flex;
   align-items:   center;
   gap:           14px;
-  padding:       12px 20px;
+  padding:       14px 24px;
   background:    linear-gradient(90deg, #f0e8e2, #faf6f2);
   border-bottom: 1px solid var(--border);
   position:      sticky;
@@ -57,50 +57,68 @@ header {
 }
 
 .logo {
-  font-family: 'Baloo 2', cursive;
-  font-size:   clamp(18px, 3.5vw, 26px);
-  font-weight: 800;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size:   clamp(20px, 3.5vw, 30px);
+  font-weight: 700;
   color:       var(--gold);
-  text-shadow: 0 0 18px var(--gold-glow);
+  text-shadow: 0 1px 8px var(--gold-glow);
   flex:        1;
   white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
-/* (json-btn removed — upload feature disabled) */
-
-
-/* ── NAV ───────────────────────────────────────────────── */
-nav {
-  display:   flex;
-  gap:       5px;
-  flex-wrap: wrap;
+/* ── BOTTOM NAV ────────────────────────────────────────── */
+.bottom-nav {
+  position:        fixed;
+  bottom:          0;
+  left:            0;
+  right:           0;
+  z-index:         200;
+  display:         flex;
+  align-items:     stretch;
+  justify-content: center;
+  background:      #ffffff;
+  border-top:      1.5px solid var(--border);
+  box-shadow:      0 -4px 24px rgba(0,0,0,0.08);
+  overflow-x:      auto;
+  scrollbar-width: none;
+  padding-bottom:  env(safe-area-inset-bottom, 0px);
 }
+.bottom-nav::-webkit-scrollbar { display: none; }
 
-nav button {
-  background:    rgba(255,255,255,0.05);
-  border:        1.5px solid var(--border);
-  color:         var(--text-dim);
-  padding:       7px 14px;
-  border-radius: 50px;
-  cursor:        pointer;
-  font-family:   'Nunito', sans-serif;
-  font-size:     13px;
-  font-weight:   700;
-  transition:    all 0.2s;
-  white-space:   nowrap;
+.bottom-nav button {
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  justify-content: center;
+  gap:             3px;
+  flex:            0 0 auto;
+  min-width:       72px;
+  padding:         10px 10px 8px;
+  background:      transparent;
+  border:          none;
+  border-top:      2.5px solid transparent;
+  color:           var(--text-dim);
+  cursor:          pointer;
+  font-family:     'Jost', system-ui, sans-serif;
+  transition:      all 0.18s;
 }
-nav button:hover,
-nav button.active {
-  background:  var(--gold);
-  border-color:var(--gold);
-  color:       #ffffff;
-  box-shadow:  0 3px 14px var(--gold-glow);
+.bottom-nav button:hover {
+  background: rgba(226,125,96,0.06);
+  color:      var(--text);
 }
+.bottom-nav button.active {
+  border-top-color: var(--gold);
+  color:            var(--gold);
+  background:       rgba(226,125,96,0.07);
+}
+.bnav-icon  { font-size: 20px; line-height: 1; }
+.bnav-label { font-size: 10px; font-weight: 600; white-space: nowrap; letter-spacing: 0.02em; }
 
 /* ── PAGES ─────────────────────────────────────────────── */
 .page {
   display:    none;
-  padding:    24px 18px 40px;
+  padding:    24px 18px 110px;
   max-width:  1100px;
   margin:     0 auto;
 }
@@ -109,7 +127,7 @@ nav button.active {
 
 /* ── SECTION TITLE ─────────────────────────────────────── */
 .section-title {
-  font-family:   'Baloo 2', cursive;
+  font-family:   'Cormorant Garamond', Georgia, serif;
   font-size:     clamp(20px, 4vw, 30px);
   font-weight:   800;
   margin-bottom: 18px;
@@ -143,7 +161,7 @@ nav button.active {
 @keyframes float { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-12px) } }
 
 .hero h1 {
-  font-family:   'Baloo 2', cursive;
+  font-family:   'Cormorant Garamond', Georgia, serif;
   font-size:     clamp(26px, 5vw, 48px);
   font-weight:   800;
   margin-bottom: 12px;
@@ -201,7 +219,7 @@ nav button.active {
 .fact-box h3 {
   color:         var(--gold);
   margin-bottom: 10px;
-  font-family:   'Baloo 2', cursive;
+  font-family:   'Cormorant Garamond', Georgia, serif;
   font-size:     18px;
 }
 
@@ -258,7 +276,7 @@ nav button.active {
   padding:       7px 14px;
   border-radius: 50px;
   cursor:        pointer;
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   800;
   font-size:     13px;
   transition:    all 0.18s;
@@ -277,7 +295,7 @@ nav button.active {
   padding:       9px 20px;
   border-radius: 50px;
   cursor:        pointer;
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   800;
   font-size:     13px;
   transition:    all 0.2s;
@@ -421,7 +439,7 @@ nav button.active {
   padding:       14px 12px;
   border-radius: var(--br-sm);
   cursor:        pointer;
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   800;
   font-size:     16px;
   transition:    all 0.18s;
@@ -464,7 +482,7 @@ nav button.active {
   padding:       14px 24px;
   border-radius: 50px;
   cursor:        pointer;
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   800;
   font-size:     16px;
   transition:    all 0.2s;
@@ -485,7 +503,7 @@ nav button.active {
 }
 .result-stars { font-size: 48px; margin-bottom: 16px; }
 .result-title {
-  font-family:   'Baloo 2', cursive;
+  font-family:   'Cormorant Garamond', Georgia, serif;
   font-size:     clamp(24px, 5vw, 38px);
   font-weight:   800;
   margin-bottom: 14px;
@@ -511,7 +529,7 @@ nav button.active {
   padding:       14px 36px;
   border-radius: 50px;
   cursor:        pointer;
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   900;
   font-size:     18px;
   transition:    all 0.2s;
@@ -527,7 +545,7 @@ nav button.active {
   z-index:       9999;
   padding:       14px 22px;
   border-radius: var(--br-sm);
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   800;
   font-size:     15px;
   color:         white;
@@ -545,10 +563,9 @@ nav button.active {
 
 /* ── RESPONSIVE ────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .page { padding: 16px 12px 36px; }
+  .page { padding: 16px 12px 100px; }
   header { padding: 10px 12px; gap: 8px; }
-  .logo  { font-size: 16px; }
-  nav button { padding: 6px 10px; font-size: 12px; }
+  .logo  { font-size: 18px; }
   #sim-canvas, #theater-canvas { height: min(320px, 66vw); }
   .quiz-canvas { width: 220px !important; height: 220px !important; }
 }
@@ -558,8 +575,7 @@ nav button.active {
    NEW PAGES — Ұйымдастыру / Бекіту / Толқын / Сен / Сергіту
 ═══════════════════════════════════════════════════════════════ */
 
-/* ── Shared nav wrap scroll on mobile ─────────────────────────── */
-nav { overflow-x: auto; }
+/* ── Shared nav wrap scroll on mobile — handled by .bottom-nav ── */
 
 
 /* ════════════════════════════════════════════════
@@ -589,7 +605,7 @@ nav { overflow-x: auto; }
 }
 
 .org-title {
-  font-family:   'Baloo 2', cursive;
+  font-family:   'Cormorant Garamond', Georgia, serif;
   font-size:     clamp(20px, 4vw, 32px);
   font-weight:   800;
   color:         var(--gold);
@@ -661,7 +677,7 @@ nav { overflow-x: auto; }
   justify-content:center;
 }
 .org-btn {
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   800;
   font-size:     15px;
   border:        none;
@@ -700,7 +716,7 @@ nav { overflow-x: auto; }
   gap:           7px;
   background:    linear-gradient(135deg, var(--teal), #2fa89e);
   color:         #ffffff;
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   800;
   font-size:     14px;
   padding:       10px 24px;
@@ -765,7 +781,7 @@ nav { overflow-x: auto; }
 }
 
 .bek-question {
-  font-family:   'Baloo 2', cursive;
+  font-family:   'Cormorant Garamond', Georgia, serif;
   font-size:     clamp(17px, 3.5vw, 24px);
   font-weight:   700;
   color:         var(--text);
@@ -783,7 +799,7 @@ nav { overflow-x: auto; }
   flex:          1;
   min-width:     120px;
   max-width:     200px;
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   900;
   font-size:     18px;
   padding:       14px 20px;
@@ -831,7 +847,7 @@ nav { overflow-x: auto; }
   padding:       14px 24px;
   border-radius: 50px;
   cursor:        pointer;
-  font-family:   'Nunito', sans-serif;
+  font-family:   'Jost', system-ui, sans-serif;
   font-weight:   800;
   font-size:     15px;
   transition:    all 0.2s;
@@ -912,7 +928,7 @@ nav { overflow-x: auto; }
   background:     transparent;
   border:         none;
   cursor:         pointer;
-  font-family:    'Nunito', sans-serif;
+  font-family:    'Jost', system-ui, sans-serif;
   color:          var(--text);
   transition:     background 0.2s;
   text-align:     left;
@@ -922,7 +938,7 @@ nav { overflow-x: auto; }
 }
 
 .tolkyn-accord-title {
-  font-family:  'Baloo 2', cursive;
+  font-family:  'Cormorant Garamond', Georgia, serif;
   font-size:    18px;
   font-weight:  700;
   color:        var(--gold);
@@ -1040,7 +1056,7 @@ nav { overflow-x: auto; }
   box-shadow:    var(--shadow);
 }
 .sen-test-title {
-  font-family:   'Baloo 2', cursive;
+  font-family:   'Cormorant Garamond', Georgia, serif;
   font-size:     20px;
   font-weight:   800;
   color:         var(--gold);
@@ -1066,7 +1082,7 @@ nav { overflow-x: auto; }
 }
 
 .sergitu-heading {
-  font-family:   'Baloo 2', cursive;
+  font-family:   'Cormorant Garamond', Georgia, serif;
   font-size:     clamp(22px, 5vw, 38px);
   font-weight:   800;
   text-align:    center;
