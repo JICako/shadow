@@ -8,23 +8,23 @@
 
 /* ── Variables ─────────────────────────────────────────── */
 :root {
-  --bg:        #0d0d1e;
-  --surface:   #141430;
-  --surface2:  #1c1c40;
-  --border:    rgba(255,255,255,0.08);
-  --gold:      #f5c518;
-  --gold-glow: rgba(245,197,24,0.2);
-  --amber:     #ff9500;
-  --teal:      #4ecdc4;
-  --purple:    #7c6fe0;
-  --pink:      #ff6b9d;
-  --green:     #6bcb77;
-  --red:       #ff4757;
-  --text:      #eef0ff;
-  --text-dim:  rgba(238,240,255,0.55);
+  --bg:        #faf6f2;
+  --surface:   #ffffff;
+  --surface2:  #f0ebe5;
+  --border:    rgba(0,0,0,0.10);
+  --gold:      #E27D60;
+  --gold-glow: rgba(226,125,96,0.25);
+  --amber:     #C38D9E;
+  --teal:      #41B3A3;
+  --purple:    #C38D9E;
+  --pink:      #E27D60;
+  --green:     #2e9e6b;
+  --red:       #d94f4f;
+  --text:      #2c2c3a;
+  --text-dim:  rgba(44,44,58,0.58);
   --br:        20px;
   --br-sm:     12px;
-  --shadow:    0 8px 32px rgba(0,0,0,0.45);
+  --shadow:    0 8px 32px rgba(0,0,0,0.10);
 }
 
 /* ── Reset ─────────────────────────────────────────────── */
@@ -48,12 +48,12 @@ header {
   align-items:   center;
   gap:           14px;
   padding:       12px 20px;
-  background:    linear-gradient(90deg, #0a0a20, #141430);
+  background:    linear-gradient(90deg, #f0e8e2, #faf6f2);
   border-bottom: 1px solid var(--border);
   position:      sticky;
   top:           0;
   z-index:       100;
-  box-shadow:    0 2px 20px rgba(0,0,0,0.5);
+  box-shadow:    0 2px 20px rgba(0,0,0,0.08);
 }
 
 .logo {
@@ -93,7 +93,7 @@ nav button:hover,
 nav button.active {
   background:  var(--gold);
   border-color:var(--gold);
-  color:       #0d0d1e;
+  color:       #ffffff;
   box-shadow:  0 3px 14px var(--gold-glow);
 }
 
@@ -126,8 +126,8 @@ nav button.active {
   text-align:    center;
   padding:       48px 24px;
   border-radius: var(--br);
-  background:    linear-gradient(135deg, #1a1050, #0d2060);
-  border:        1px solid rgba(124,111,224,0.3);
+  background:    linear-gradient(135deg, #fde8e0, #e8f7f5);
+  border:        1px solid rgba(226,125,96,0.25);
   margin-bottom: 28px;
   box-shadow:    var(--shadow);
 }
@@ -252,8 +252,8 @@ nav button.active {
 }
 
 .obj-btn {
-  background:    rgba(124,111,224,0.1);
-  border:        1.5px solid rgba(124,111,224,0.35);
+  background:    rgba(195,141,158,0.1);
+  border:        1.5px solid rgba(195,141,158,0.35);
   color:         var(--text);
   padding:       7px 14px;
   border-radius: 50px;
@@ -267,13 +267,13 @@ nav button.active {
   background:   var(--purple);
   border-color: var(--purple);
   color:        white;
-  box-shadow:   0 3px 14px rgba(124,111,224,0.45);
+  box-shadow:   0 3px 14px rgba(195,141,158,0.45);
 }
 
 .toggle-btn {
   background:    linear-gradient(135deg, var(--gold), var(--amber));
   border:        none;
-  color:         #0d0d1e;
+  color:         #ffffff;
   padding:       9px 20px;
   border-radius: 50px;
   cursor:        pointer;
@@ -284,11 +284,11 @@ nav button.active {
   box-shadow:    0 3px 14px var(--gold-glow);
 }
 .toggle-btn:hover  { transform: scale(1.05); }
-.toggle-btn.off    { background: linear-gradient(135deg, #555, #333); box-shadow: none; color: white; }
+.toggle-btn.off    { background: linear-gradient(135deg, #ccc, #aaa); box-shadow: none; color: white; }
 
 .tip-box {
-  background:    linear-gradient(135deg, rgba(245,197,24,0.08), rgba(255,149,0,0.06));
-  border:        1.5px solid rgba(245,197,24,0.25);
+  background:    linear-gradient(135deg, rgba(226,125,96,0.10), rgba(195,141,158,0.08));
+  border:        1.5px solid rgba(226,125,96,0.30);
   border-radius: var(--br-sm);
   padding:       12px 18px;
   font-size:     14px;
@@ -426,15 +426,15 @@ nav button.active {
   font-size:     16px;
   transition:    all 0.18s;
 }
-.quiz-opt:hover { border-color: var(--purple); background: rgba(124,111,224,0.12); }
+.quiz-opt:hover { border-color: var(--purple); background: rgba(195,141,158,0.12); }
 .quiz-opt.correct {
-  background:  rgba(107,203,119,0.18);
+  background:  rgba(46,158,107,0.15);
   border-color:var(--green);
   color:       var(--green);
   animation:   popCorrect 0.35s ease;
 }
 .quiz-opt.wrong {
-  background:  rgba(255,71,87,0.15);
+  background:  rgba(217,79,79,0.12);
   border-color:var(--red);
   color:       var(--red);
   animation:   shake 0.3s ease;
@@ -458,7 +458,7 @@ nav button.active {
 .quiz-next {
   display:       none;
   width:         100%;
-  background:    linear-gradient(135deg, var(--purple), #5a4fb8);
+  background:    linear-gradient(135deg, var(--purple), #b07d8e);
   border:        none;
   color:         white;
   padding:       14px 24px;
@@ -468,10 +468,10 @@ nav button.active {
   font-weight:   800;
   font-size:     16px;
   transition:    all 0.2s;
-  box-shadow:    0 4px 20px rgba(124,111,224,0.4);
+  box-shadow:    0 4px 20px rgba(195,141,158,0.4);
 }
 .quiz-next.visible { display: block; animation: fadeIn 0.25s ease; }
-.quiz-next:hover   { transform: scale(1.03); box-shadow: 0 6px 26px rgba(124,111,224,0.6); }
+.quiz-next:hover   { transform: scale(1.03); box-shadow: 0 6px 26px rgba(195,141,158,0.6); }
 
 /* Result screen */
 .quiz-result {
@@ -507,7 +507,7 @@ nav button.active {
 .quiz-restart {
   background:    linear-gradient(135deg, var(--gold), var(--amber));
   border:        none;
-  color:         #0d0d1e;
+  color:         #ffffff;
   padding:       14px 36px;
   border-radius: 50px;
   cursor:        pointer;
@@ -539,9 +539,9 @@ nav button.active {
   max-width:     340px;
 }
 .toast.show        { opacity: 1; transform: translateY(0); }
-.toast-success     { background: linear-gradient(135deg, #1e7e34, #28a745); }
-.toast-error       { background: linear-gradient(135deg, #b71c1c, #d32f2f); }
-.toast-info        { background: linear-gradient(135deg, var(--purple), #5a4fb8); }
+.toast-success     { background: linear-gradient(135deg, #2e9e6b, #3ab87d); }
+.toast-error       { background: linear-gradient(135deg, #c0392b, #d94f4f); }
+.toast-info        { background: linear-gradient(135deg, var(--purple), #b07d8e); }
 
 /* ── RESPONSIVE ────────────────────────────────────────── */
 @media (max-width: 600px) {
@@ -681,7 +681,7 @@ nav { overflow-x: auto; }
   color:      var(--text-dim);
 }
 .org-btn-back:hover:not(:disabled) {
-  background:   rgba(124,111,224,0.15);
+  background:   rgba(195,141,158,0.15);
   border-color: var(--purple);
   color:        var(--text);
 }
@@ -699,7 +699,7 @@ nav { overflow-x: auto; }
   align-items:   center;
   gap:           7px;
   background:    linear-gradient(135deg, var(--teal), #2fa89e);
-  color:         #0d0d1e;
+  color:         #ffffff;
   font-family:   'Nunito', sans-serif;
   font-weight:   800;
   font-size:     14px;
@@ -801,13 +801,13 @@ nav { overflow-x: auto; }
 .bek-btn:disabled { cursor: not-allowed; }
 
 .bek-btn.bek-correct {
-  background:   rgba(107,203,119,0.2);
+  background:   rgba(46,158,107,0.18);
   border-color: var(--green);
   color:        var(--green);
   animation:    popCorrect 0.35s ease;
 }
 .bek-btn.bek-wrong {
-  background:   rgba(255,71,87,0.18);
+  background:   rgba(217,79,79,0.14);
   border-color: var(--red);
   color:        var(--red);
   animation:    shake 0.3s ease;
@@ -825,7 +825,7 @@ nav { overflow-x: auto; }
 .bek-nav-btn {
   display:       block;
   width:         100%;
-  background:    linear-gradient(135deg, var(--purple), #5a4fb8);
+  background:    linear-gradient(135deg, var(--purple), #b07d8e);
   border:        none;
   color:         white;
   padding:       14px 24px;
@@ -835,7 +835,7 @@ nav { overflow-x: auto; }
   font-weight:   800;
   font-size:     15px;
   transition:    all 0.2s;
-  box-shadow:    0 4px 18px rgba(124,111,224,0.4);
+  box-shadow:    0 4px 18px rgba(195,141,158,0.4);
   animation:     fadeIn 0.25s ease;
 }
 .bek-nav-btn:hover   { transform: scale(1.03); }
@@ -858,7 +858,7 @@ nav { overflow-x: auto; }
   overflow:      hidden;
   border:        1.5px solid var(--border);
   box-shadow:    var(--shadow);
-  background:    linear-gradient(135deg, #0d2060, #1a3080);
+  background:    linear-gradient(135deg, #e8f7f5, #fde8e0);
   min-height:    200px;
   display:       flex;
   align-items:   center;
@@ -1070,7 +1070,7 @@ nav { overflow-x: auto; }
   font-size:     clamp(22px, 5vw, 38px);
   font-weight:   800;
   text-align:    center;
-  background:    linear-gradient(135deg, var(--gold), var(--amber), var(--pink));
+  background:    linear-gradient(135deg, var(--gold), var(--amber), var(--teal));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1085,7 +1085,7 @@ nav { overflow-x: auto; }
   border:        1.5px solid var(--border);
   border-radius: var(--br);
   overflow:      hidden;
-  box-shadow:    0 10px 48px rgba(0,0,0,0.5);
+  box-shadow:    0 10px 48px rgba(0,0,0,0.12);
   display:       flex;
   align-items:   center;
   justify-content:center;
