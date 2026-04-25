@@ -184,7 +184,7 @@ class ShadowQuiz {
     const H   = canvas.height;
 
     // Dark background
-    ctx.fillStyle = '#07070f';
+    ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, W, H);
 
     // Ambient radial glow (mystery!)
