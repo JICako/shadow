@@ -275,7 +275,7 @@ class ShadowTheater {
 
       img.onerror = null;
       img.onload  = () => this.render();
-      img.src     = off.toDataURL('image/png');
+      img.src     = off.toDataURL('image/webp');
     };
 
     img.src = src;

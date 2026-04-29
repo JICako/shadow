@@ -1,53 +1,53 @@
 {
-  "_comment": "Көлеңке Әлемі — контент конфигурациясы. Жаңа объект = PNG файл + JSON жазба.",
+  "_comment": "Көлеңке Әлемі — контент конфигурациясы. Жаңа объект = webp файл + JSON жазба.",
 
   "objects": [
     {
       "name":   "ball",
       "label":  "Доп",
       "emoji":  "",
-      "image":  "assets/ball.png",
-      "shadow": "assets/shadow_ball.png",
+      "image":  "assets/ball.webp",
+      "shadow": "assets/shadow_ball.webp",
       "shape":  "ball"
     },
     {
       "name":   "car",
       "label":  "Машина",
       "emoji":  "",
-      "image":  "assets/car.png",
-      "shadow": "assets/shadow_car.png",
+      "image":  "assets/car.webp",
+      "shadow": "assets/shadow_car.webp",
       "shape":  "car"
     },
     {
       "name":   "tree",
       "label":  "Ағаш",
       "emoji":  "",
-      "image":  "assets/tree.png",
-      "shadow": "assets/shadow_tree.png",
+      "image":  "assets/tree.webp",
+      "shadow": "assets/shadow_tree.webp",
       "shape":  "tree"
     },
     {
       "name":   "aqua",
       "label":  "Аквариум",
       "emoji":  "",
-      "image":  "assets/aqua.png",
-      "shadow": "assets/shadow_aqua.png",
+      "image":  "assets/aqua.webp",
+      "shadow": "assets/shadow_aqua.webp",
       "shape":  "aqua"
     },
     {
       "name":   "vaza",
       "label":  "Жұлдыз",
       "emoji":  "",
-      "image":  "assets/vase.png",
-      "shadow": "assets/shadow_vase.png",
+      "image":  "assets/vase.webp",
+      "shadow": "assets/shadow_vase.webp",
       "shape":  "vaza"
     },
     {
       "name":   "glass",
       "label":  "Стакан",
       "emoji":  "",
-      "image":  "assets/glass.png",
-      "shadow": "assets/shadow_glass.png",
+      "image":  "assets/glass.webp",
+      "shadow": "assets/shadow_glass.webp",
       "shape":  "glass"
     }
   ],
@@ -57,24 +57,24 @@
       "name":   "bunny",
       "label":  "Қоян",
       "emoji":  "",
-      "hand":   "assets/bunny.png",
-      "shadow": "assets/shadow_bunny.png",
+      "hand":   "assets/bunny.webp",
+      "shadow": "assets/shadow_bunny.webp",
       "shape":  "bunny"
     },
     {
       "name":   "bird",
       "label":  "Құс",
       "emoji":  "",
-      "hand":   "assets/bird.png",
-      "shadow": "assets/shadow_bird.png",
+      "hand":   "assets/bird.webp",
+      "shadow": "assets/shadow_bird.webp",
       "shape":  "bird"
     },
     {
       "name":   "wolf",
       "label":  "Қасқыр",
       "emoji":  "",
-      "hand":   "assets/wolf.png",
-      "shadow": "assets/shadow_wolf.png",
+      "hand":   "assets/wolf.webp",
+      "shadow": "assets/shadow_wolf.webp",
       "shape":  "wolf"
     },
     {
@@ -82,56 +82,56 @@
       "label":  "Бұғы",
       "emoji":  "",
       "hand":   "assets/deef",
-      "shadow": "assets/shadow_deef.png",
+      "shadow": "assets/shadow_deef.webp",
       "shape":  "deef"
     }
   ],
 
   "quiz": [
     {
-      "shadow":  "assets/shadow_ball.png",
+      "shadow":  "assets/shadow_ball.webp",
       "shape":   "ball",
       "options": ["ball", "vase", "car"],
       "correct": "ball"
     },
     {
-      "shadow":  "assets/shadow_car.png",
+      "shadow":  "assets/shadow_car.webp",
       "shape":   "car",
       "options": ["tree", "car", "aqua"],
       "correct": "car"
     },
     {
-      "shadow":  "assets/shadow_tree.png",
+      "shadow":  "assets/shadow_tree.webp",
       "shape":   "tree",
       "options": ["vase", "ball", "tree"],
       "correct": "tree"
     },
     {
-      "shadow":  "assets/shadow_aqua.png",
+      "shadow":  "assets/shadow_aqua.webp",
       "shape":   "aqua",
       "options": ["aqua", "car", "ball"],
       "correct": "aqua"
     },
     {
-      "shadow":  "assets/shadow_vase.png",
+      "shadow":  "assets/shadow_vase.webp",
       "shape":   "vase",
       "options": ["vase", "tree", "қоян"],
       "correct": "vase"
     },
     {
-      "shadow":  "assets/shadow_bunny.png",
+      "shadow":  "assets/shadow_bunny.webp",
       "shape":   "қоян",
       "options": ["қоян", "dog", "fox"],
       "correct": "қоян"
     },
     {
-      "shadow":  "assets/shadow_bird.png",
+      "shadow":  "assets/shadow_bird.webp",
       "shape":   "bird",
       "options": ["fox", "bird", "car"],
       "correct": "bird"
     },
     {
-      "shadow":  "assets/shadow_wolf.png",
+      "shadow":  "assets/shadow_wolf.webp",
       "shape":   "wolf",
       "options": ["wolf", "tree", "vase"],
       "correct": "wolf"

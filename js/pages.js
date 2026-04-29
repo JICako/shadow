@@ -14,11 +14,11 @@
 ================================================================ */
 
 const organizeSlides = [
-  { text: "Дайындал!",            img: "assets/down.png" },
-  { text: "Күн шықты!",           img: "assets/up.png" },
-  { text: "Көлеңке пайда болды!", img: "assets/down.png" },
-  { text: "Күн жасырынды!",       img: "assets/cover.png" },
-  { text: "Желмен қозғалады!",    img: "assets/wave.png" },
+  { text: "Дайындал!",            img: "assets/down.webp" },
+  { text: "Күн шықты!",           img: "assets/up.webp" },
+  { text: "Көлеңке пайда болды!", img: "assets/down.webp" },
+  { text: "Күн жасырынды!",       img: "assets/cover.webp" },
+  { text: "Желмен қозғалады!",    img: "assets/wave.webp" },
 ];
 
 let organizeIndex = 0;

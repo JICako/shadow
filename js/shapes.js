@@ -268,7 +268,7 @@ const Shapes = {
     this.draw(ctx, type, size / 2, size / 2, size * 0.38, color);
 
     const img = new Image();
-    img.src   = offscreen.toDataURL('image/png');
+    img.src   = offscreen.toDataURL('image/webp');
     return img;
   },
 

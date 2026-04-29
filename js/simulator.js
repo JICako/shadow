@@ -343,7 +343,7 @@ class ShadowSimulator {
 
       img.onerror = null;       // prevent infinite loop
       img.onload  = () => this.render();
-      img.src     = off.toDataURL('image/png');
+      img.src     = off.toDataURL('image/webp');
     };
 
     img.src = src;
