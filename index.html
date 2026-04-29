@@ -20,12 +20,29 @@
 ══════════════════════════════════════════════════════ -->
 <section id="page-home" class="page active">
 
-  <div class="hero">
-    <h1>Көлеңке қалай пайда болады?</h1>
-    <p>
-      Жарық пен көлеңке туралы ғылымды интерактивті симулятор,
-      театр және тапсырма арқылы үйрен.
-    </p>
+  <!-- ── TOPIC REVEAL PANEL ── -->
+  <div id="topic-reveal" class="topic-reveal" onclick="revealTopic()" title="Басу үшін басыңыз">
+
+    <!-- Shadow image shown behind blur -->
+
+    <!-- Blurred overlay with question text -->
+    <div class="topic-blur-overlay" id="topic-blur-overlay">
+      <div class="topic-blur-content">
+        <span class="topic-question-icon"><img src="assets/shadow.jpeg" width="150" height="150"></span>
+        <p class="topic-hint-text">Сабақтың тақырыбы қандай?</p>
+        <p class="topic-click-hint">👆 Білу үшін басыңыз</p>
+      </div>
+    </div>
+
+    <!-- Hidden topic title, shown after click -->
+    <div class="topic-title-overlay" id="topic-title-overlay">
+      <div class="topic-title-content">
+        <span class="topic-reveal-icon">✨</span>
+        <h1 class="topic-title-text">Көлеңке қалай пайда болады?</h1>
+        <p class="topic-subtitle">Жарық пен көлеңке туралы ғылымды үйрен!</p>
+      </div>
+    </div>
+
   </div>
 
   <h2 class="section-title">📚 Не үйренесің?</h2>
@@ -377,14 +394,14 @@
 
   <div class="sergitu-wrapper">
 
-    <p class="sergitu-heading">Роботпен бірге биле!</p>
+    <p class="sergitu-heading"></p>
 
     <!-- Centered video -->
     <div class="sergitu-video-wrap">
       <!-- сюда вставить видео -->
       <iframe
         class="sergitu-iframe"
-        src="assets/robot.mp4"
+        src="assets/serega.mp4"
         title="Сергіту сәті — Роботпен бірге биле"
         frameborder="0"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -481,5 +498,17 @@
 <script src="js/pages.js"></script>
 <script src="js/app.js"></script>
 
+
+<script>
+/* ── Topic Reveal ── */
+function revealTopic() {
+  const panel = document.getElementById('topic-reveal');
+  if (!panel || panel.classList.contains('revealed')) return;
+  panel.classList.add('revealed');
+  // Play a quick scale bounce on the panel
+  panel.style.transform = 'scale(1.03)';
+  setTimeout(() => { panel.style.transform = ''; }, 300);
+}
+</script>
 </body>
 </html>
